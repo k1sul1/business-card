@@ -1,7 +1,8 @@
 {
-  "4K": "(min-width: 3840px)",
-  "2K": "(min-width: 2560px)",
-  "1K": "(min-width: 1920px)",
-  "tablet": "(min-width: 640px)",
+  "huge_desktop": "(min-width: 3840px)",
+  "large_desktop": "(min-width: 2560px)",
+  "desktop": "(min-width: 1280px)",
+  "tablet": "(min-width: 1024px)",
+  "phablet": "(min-width: 640px)",
   "mobile": "(min-width: 0px)"
 }

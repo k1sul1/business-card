@@ -338,7 +338,7 @@ a:hover {
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
 }
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   html {
     font-size: 20px;
   }
@@ -369,7 +369,7 @@ body {
   width: 93vw;
   height: 95vh;
 }
-@media (min-width: 640px) {
+@media (min-width: 1280px) {
   .vcard {
     width: 55.625rem;
     height: 31.875rem;
@@ -384,7 +384,7 @@ body {
           transform-style: preserve-3d;
   position: relative;
 }
-@media (min-width: 640px) {
+@media (min-width: 1280px) {
   .vcard .flipper {
     -webkit-transform-origin: 100% 15.9375rem;
             transform-origin: 100% 15.9375rem;
@@ -407,7 +407,7 @@ body {
   width: 93vw;
   height: 95vh;
 }
-@media (min-width: 640px) {
+@media (min-width: 1280px) {
   .vcard .front,
   .vcard .back {
     width: 55.625rem;
@@ -428,7 +428,7 @@ body {
 .vcard .front .side-by-side {
   margin-top: auto;
 }
-@media (min-width: 640px) {
+@media (min-width: 1280px) {
   .vcard .front .side-by-side {
     margin-top: 0;
     display: -webkit-box;
@@ -465,7 +465,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media (min-width: 640px) {
+@media (min-width: 1280px) {
   .vcard .back .optiscroll-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -474,7 +474,7 @@ body {
         flex-flow: row wrap;
   }
 }
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .vcard .back section {
     width: 50%;
   }
