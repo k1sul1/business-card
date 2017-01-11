@@ -8,7 +8,7 @@
     "stylus": "stylus  --inline --sourcemap --out dist/css/bundle.css src/styl/entry.styl",
     "rollup": "rollup --sourcemap -c rollup.config.js --name bundle",
     "serve": "browser-sync start --server --plugins --files 'dist/js/*.js, dist/css/*.css, *.html' --no-open --no-notify",
-    "build:css": "npm run stylus && npm run autoprefixer",
+    "build:css": "npm-run-all -p stylus autoprefixer",
     "build:js": "npm run rollup",
     "watch:css": "onchange src/styl/**/*.styl -- npm run build:css",
     "watch:js": "onchange src/js/*.js -- npm run build:js",
