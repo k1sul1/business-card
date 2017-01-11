@@ -1,0 +1,42 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0
+  margin-bottom: 1rem
+  padding: 0
+  font-weight: 900
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  .subheading {
+    font-size: 0.6em
+    display: block
+  }
+}
+
+p {
+  font-weight: 400
+}
+
+a {
+  color: #222
+  font-weight: 900
+  text-decoration: none
+  transition: 0.3s linear
+  cursor: pointer
+
+  &:hover {
+    border-bottom: 1px solid darken(#222, 10%)
+    color: darken(#222, 10%)
+  }
+}
+
+.emoji {
+  display: inline-block
+  margin-right: r(5px)
+  //transform: translateY(r(2px))
+  font-size: 0.8em
+}
+
+.fade-in {
+  opacity: 0
+  transition: 0.3s linear
+}

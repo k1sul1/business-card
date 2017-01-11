@@ -1,0 +1,104 @@
+.vcard {
+  mobile_width = 93vw //(1vw * 51)
+  mobile_height = 95vh //(1vh * 89)
+  standard_width = r(10px * 89)
+  standard_height = r(10px * 51)
+
+  margin: 0
+  perspective: 1000px
+  width: mobile_width
+  height: mobile_height
+
+  @media tablet {
+    width: standard_width
+    height: standard_height
+  }
+
+  .flipper {
+    transform-origin: 100% (mobile_height / 2)
+    transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1)
+    transform-style: preserve-3d
+    position: relative
+
+    @media tablet {
+      transform-origin: 100% (standard_height / 2)
+    }
+
+    ^[0].flip .flipper {
+      transform: rotateX(180deg)
+    }
+  }
+
+  .front, .back {
+    background: #f1f1f1
+    box-shadow: 4px 4px 5px -1px rgba(0,0,0,0.75)
+    padding: r(20px)
+    backface-visibility: hidden
+    position: absolute
+    top: 0
+    left: 0
+    width: mobile_width
+    height: mobile_height
+
+    @media tablet {
+      width: standard_width
+      height: standard_height
+    }
+  }
+
+  .front {
+    z-index: 2
+    transform: rotateX(0)
+    display: flex
+    flex-flow: column nowrap
+    text-align: center
+    //align-items: center
+    //align-content: center
+
+    .side-by-side {
+      margin-top: auto
+
+      @media tablet {
+        margin-top: 0
+        display: flex
+        text-align: left
+        flex-flow: row-reverse nowrap
+        justify-content: space-between
+      }
+    }
+
+    .social {
+      //align-self: flex-end
+      margin-top: auto
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+    }
+  }
+
+  .back {
+    transform: rotateX(180deg)
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+
+    .optiscroll-content {
+      @media tablet {
+        display: flex
+        flex-flow: row wrap
+      }
+    }
+
+    section {
+      @media tablet {
+        width: 50%
+      }
+    }
+  }
+
+  .optiscroll-content {
+    padding: r(20px)
+  }
+}
+
+

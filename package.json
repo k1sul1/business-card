@@ -1,0 +1,36 @@
+{
+  "name": "kisu.li",
+  "version": "1.0.0",
+  "description": "My business card.",
+  "main": "index.html",
+  "scripts": {
+    "autoprefixer": "postcss -u autoprefixer -r dist/css/bundle.css",
+    "stylus": "stylus  --inline --sourcemap --out dist/css/bundle.css src/styl/entry.styl",
+    "rollup": "rollup --sourcemap -c rollup.config.js --name bundle",
+    "serve": "browser-sync start --server --plugins --files 'dist/js/*.js, dist/css/*.css, *.html' --no-open --no-notify",
+    "build:css": "npm run stylus && npm run autoprefixer",
+    "build:js": "npm run rollup",
+    "watch:css": "onchange src/styl/**/*.styl -- npm run build:css",
+    "watch:js": "onchange src/js/*.js -- npm run build:js",
+    "dev": "npm-run-all -p serve watch:css watch:js",
+    "postinstall": "npm-run-all -p build:css build:js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "browser-sync": "^2.17.5",
+    "npm-run-all": "^4.0.0",
+    "onchange": "^3.2.1",
+    "postcss": "^5.2.9",
+    "postcss-cli": "^2.6.0",
+    "rollup": "^0.41.1",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-plugin-json": "^2.1.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "stylus": "^0.54.5"
+  },
+  "dependencies": {
+    "optiscroll": "^2.0.1",
+    "shake.js": "^1.2.2"
+  }
+}
