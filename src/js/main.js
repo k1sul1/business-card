@@ -1,6 +1,5 @@
 import Optiscroll from 'optiscroll';
 import Shake from 'shake.js';
-//import Hammer from 'hammerjs';
 
 let flipped = false;
 const vcard = document.querySelector('.vcard');
@@ -13,9 +12,6 @@ const toggleFlip = () => {
 
   return flipCard();
 }
-
-//vcard.addEventListener('mouseover', flipCard);
-//vcard.addEventListener('mouseout', unflipCard);
 
 const scrollInstances = Array.from(document.querySelectorAll('.optiscroll')).map(area => {
   return new Optiscroll(area);
@@ -30,7 +26,6 @@ shakeInstance.start();
 window.addEventListener('shake', function(e) {
   toggleFlip();
 }, false);
-
 
 Array.from(document.querySelectorAll('.toggle-flip')).map(element => {
   element.addEventListener('click', toggleFlip);
